@@ -8,8 +8,11 @@ from esphome.const import (
     CONF_TOTAL,
     DEVICE_CLASS_WATER,
     STATE_CLASS_TOTAL_INCREASING,
-    UNIT_LITRES,
 )
+
+# Define UNIT_LITERS
+UNIT_LITERS = "L"
+UNIT_LITRES = "L"
 
 CODEOWNERS = ["@dentra"]
 
@@ -30,26 +33,26 @@ CONFIG_SCHEMA = cv.Schema(
         cv.GenerateID(CONF_TIME_ID): cv.use_id(time.RealTimeClock),
         cv.Required(CONF_TOTAL): cv.use_id(sensor.Sensor),
         cv.Optional(CONF_WATER_TODAY): sensor.sensor_schema(
-            unit_of_measurement=LITRES,
-            accuracy_decimals=1,
+            unit_of_measurement=L,
+            accuracy_decimals=2,
             device_class=DEVICE_CLASS_WATER,
             state_class=STATE_CLASS_TOTAL_INCREASING,
         ),
         cv.Optional(CONF_WATER_YESTERDAY): sensor.sensor_schema(
-            unit_of_measurement=LITRES,
-            accuracy_decimals=1,
+            unit_of_measurement=L,
+            accuracy_decimals=2,
             device_class=DEVICE_CLASS_WATER,
             state_class=STATE_CLASS_TOTAL_INCREASING,
         ),
         cv.Optional(CONF_WATER_WEEK): sensor.sensor_schema(
-            unit_of_measurement=LITRES,
-            accuracy_decimals=1,
+            unit_of_measurement=L,
+            accuracy_decimals=2,
             device_class=DEVICE_CLASS_WATER,
             state_class=STATE_CLASS_TOTAL_INCREASING,
         ),
         cv.Optional(CONF_WATER_MONTH): sensor.sensor_schema(
-            unit_of_measurement=LITRES,
-            accuracy_decimals=1,
+            unit_of_measurement=L,
+            accuracy_decimals=2,
             device_class=DEVICE_CLASS_WATER,
             state_class=STATE_CLASS_TOTAL_INCREASING,
         ),
