@@ -12,6 +12,7 @@ from esphome.const import (
 
 # Define UNIT_LITERS
 UNIT_LITERS = "L"
+UNIT_LITRES = "L"
 
 CODEOWNERS = ["@dentra"]
 
