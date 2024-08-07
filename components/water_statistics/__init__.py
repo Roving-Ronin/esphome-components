@@ -8,6 +8,7 @@ from esphome.const import (
     CONF_TOTAL,
     DEVICE_CLASS_WATER,
     STATE_CLASS_TOTAL_INCREASING,
+    UNIT_LITER
 )
 
 # Define UNIT_LITERS
